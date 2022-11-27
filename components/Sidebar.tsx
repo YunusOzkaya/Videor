@@ -12,7 +12,6 @@ import Footer from './Footer'
 function Sidebar() {
   const [showSidebar, SetShowSidebar] = useState(true)
   const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F06553] rounded'
-  const userProfile= false
   return (
    <div>
     <div className='block xl:hidden m-2 ml-3 mt-3 text-xl ' onClick={()=>SetShowSidebar((prev)=> !prev)}>
@@ -24,15 +23,15 @@ function Sidebar() {
             <Link href='/'>
               <div className={normalLink}>
                 <p className='text-2xl'><AiFillHome /></p>
-                <span className='hidden xl:block text-xl'>You Might Like</span>
+                <span className='hidden xl:block text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-[#F06553] to-yellow-600'>You Might Like</span>
               </div>
             </Link>
           </div>
-          {!userProfile && (
+          
           <div className='px-2 py-4 hidden xl:block'>
-            <p className='text-gray-400'> Log In to Get Full Experience! </p>
+            <p className='text-gray-400'> Be Part of It, Share The Life! </p>
           </div>
-          )}
+          
           <Discover />
           <SuggestedAccs />
           <Footer />

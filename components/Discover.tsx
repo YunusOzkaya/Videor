@@ -5,7 +5,7 @@ import {topics} from '../utils/constants'
 
 
 function Discover() {
-    const activeStyle ='xl:border-2 xl:border-[#F06553] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-[#ED8728]'
+    const activeStyle ='xl:border-2 xl:border-[#F06553] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-blue-300'
     const topicStyle='xl:border-2 hover:bg-primary xl:border-gray-300 px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black'
     
     const router = useRouter()
