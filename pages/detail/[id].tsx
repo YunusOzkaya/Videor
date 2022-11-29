@@ -51,17 +51,18 @@ const Detail = ({ postDetails }: IProps) => {
 
   const handleLike = async (like: boolean) => {
     if (userProfile) {
-      const {data} = await axios.put(`${BASE_URL}/api/like`, {
+      const res = await axios.put(`${BASE_URL}/api/like`, {
         userId: userProfile._id,
         postId: post._id,
         like
       })
-      SetPost({ ...post, likes: data.length })
+      router.reload()
+      SetPost({ ...post, likes: res.data.length })
     }
 
   }
 
-  const addComment = async (e: { preventDefault: () => void }) => {
+  const addComment = async (e: { preventDefault: () => void}) => {
     e.preventDefault()
     if (userProfile && comment) {
       SetIsCommenting(true)
@@ -81,7 +82,7 @@ const Detail = ({ postDetails }: IProps) => {
   if (!post) return null
 
   return (
-    <div className='flex w-full absolute left-0 top-0 bg-white flex-wrapped lg:flex-nowrap'>
+    <div className='flex h-full w-full absolute left-0 top-0 bg-white flex-wrapped lg:flex-nowrap'>
       <div className='relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-[#1b1b1b] bg-opacity-40'>
         <div className=' absolute top-6 left-2 lg:left-6 flex gap-6 z-50'>
           <p className='cursor-pointer' onClick={() => router.back()}>
@@ -125,7 +126,7 @@ const Detail = ({ postDetails }: IProps) => {
               </Link>
             </div>
             <div>
-              <Link href={'/'}>
+              <Link href={`${BASE_URL}/`}>
                 <div className='mt-3 flex flex-col gap-2'>
                   <p className='flex gap-2 items-center md:text-md font-bold text-primary'>
                     {post.postedBy.userName}

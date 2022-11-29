@@ -15,7 +15,7 @@ function Navbar() {
   const {userProfile, addUser, removeUser} = userAuthStore()
   return (
     <div className='w-full flex justify-between items-center border-b-2 shadow-md border-gray-200 py-2 px-4'>
-      <Link href='./'>
+      <Link href='/'>
         <div className='w-[120px] md:w-[140px]'>
             <Image
                 className='cursor-pointer'
@@ -36,7 +36,7 @@ function Navbar() {
               </button>
             </Link>
             {userProfile.image && ( 
-              <Link href='/'>
+              <Link href={`/profile/`}>
                         <>
                             <Image 
                             width={40} 
