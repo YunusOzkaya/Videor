@@ -23,7 +23,7 @@ function Sidebar() {
             <Link href='/'>
               <div className={normalLink}>
                 <p className='text-2xl'><AiFillHome /></p>
-                <span className='hidden xl:block text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-[#F06553] to-yellow-600'>Alper sikici bir adam</span>
+                <span className='hidden xl:block text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-[#F06553] to-yellow-600'>Home</span>
               </div>
             </Link>
           </div>
