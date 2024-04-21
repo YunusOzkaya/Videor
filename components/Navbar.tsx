@@ -35,7 +35,7 @@ function Navbar() {
                 <span className='hidden md:block'>Upload</span>
               </button>
             </Link>
-            {userProfile.image && ( 
+          {/* {userProfile.image && ( 
               <Link href={`/profile/`}>
                         <>
                             <Image 
@@ -46,7 +46,7 @@ function Navbar() {
                             alt='profile-photo' 
                              />
                         </>
-                </Link>)}
+                </Link>)} */}
             <button type='button'
             className='px-2 border-b-4 shadow-md rounded-full active:border-b-2 active:shadow-hidden'
             onClick={()=>{
